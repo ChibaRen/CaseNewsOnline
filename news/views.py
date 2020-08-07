@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.utils import timezone
 from .forms import InputForm
 from .models import InputModelForm
@@ -31,4 +31,9 @@ def index(request):
             reference = case.reference,
             created_at = timezone.now,
         )
+        #return redirect('list')
     return render(request, 'index.html', {'form':form})
+
+def listfunc(request):
+    posts = InputModelForm.objects.all()
+    return render(request, 'list.html', {'post':posts})

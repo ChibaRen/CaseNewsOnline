@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="{% static "css/base.css" %}" />
-        <title>投稿フォーム</title>
+        <title>確認</title>
     </head>
     <body>
         <header>
@@ -13,29 +13,24 @@
             </div>
         </header>
 
-        <div id="info-form">
-            <form action="{% url 'news:index' %}" method="post">
-                {% csrf_token %}
+        <div id="info-post">
                 <p>お名前<br>
-                {{ form.name }}</p>
-                <p>年齢<br>
-                {{ form.age }}</p>
+                {{ post.name }}</p>
                 <p>メールアドレス<br>
-                {{ form.mail }}</p>
+                {{ post.mail }}</p>
                 <p>ケースの名前（主題）<br>
-                {{ form.title }}</p>
+                {{ post.title }}</p>
                 <p>背景知識（歴史）<br>
-                {{ form.history }}</p>
+                {{ post.history }}</p>
                 <p>ケース主題に対する過去の取り組み<br>
-                {{ form.done }}</p>
+                {{ post.done }}</p>
                 <p>問いかけ<br>
-                {{ form.question }}</p>
+                {{ post.question }}</p>
                 <p>投稿者の考え<br>
-                {{ form.idea }}</p>
+                {{ post.idea }}</p>
                 <p>参考資料<br>
-                {{ form.reference }}</p>
-                <p><button type="submit">送信</button></p>
-            </form>
+                {{ post.reference }}</p>
+                <p><input type="submit" value="確認する"></p>
         </div>
     </body>
 </html>

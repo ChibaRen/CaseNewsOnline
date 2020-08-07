@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+
+
+header{
+    background-color: #CC3300;
+    padding-top: 0px;
+    position: fixed;
+    height: 60px;
+    top: 0;
+    left: 0;
+    right: 0;      
+}
+
+#header-inner {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+h1{
+    color: white;
+    margin 0;
+    padding 0;
+    text-align: center;
+    float: center;
+    margin-top: 8px;
+}
+
+#info-form {
+    
+    padding-top: 60px; /* 打ち消し用のパディング */
+}
+
+#info-form p{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+#id_name, #id_mail, #id_title, #id_history, #id_done, #id_question, #id_idea, #id_reference{
+    margin-top: 15px;
+    line-height: 2.0;
+}
+
+.#id_name, #id_mail, #id_title, #id_history, #id_done, #id_question, #id_idea, #id_reference {
+    width: 25%;
+}
+.honbun {
+    resize: vertical;
+}

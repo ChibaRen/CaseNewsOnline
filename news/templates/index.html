@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static "css/base.css" %}" />
+        <title>投稿フォーム</title>
+    </head>
+    <body>
+        <header>
+            <div id="header-inner">
+                <h1>CaseNewSOnline</h1>
+            </div>
+        </header>
+
+        <div id="info-form">
+            <form action="{% url 'news:index' %}" method="post">
+                {% csrf_token %}
+                <p>お名前<br>
+                {{ form.name }}</p>
+                <p>メールアドレス<br>
+                {{ form.mail }}</p>
+                <p>ケースの名前（主題）<br>
+                {{ form.title }}</p>
+                <p>背景知識（歴史）<br>
+                {{ form.history }}</p>
+                <p>ケース主題に対する過去の取り組み<br>
+                {{ form.done }}</p>
+                <p>問いかけ<br>
+                {{ form.question }}</p>
+                <p>投稿者の考え<br>
+                {{ form.idea }}</p>
+                <p>参考資料<br>
+                {{ form.reference }}</p>
+                <p><input type="submit" value="確認する"></p>
+            </form>
+        </div>
+    </body>
+</html>
